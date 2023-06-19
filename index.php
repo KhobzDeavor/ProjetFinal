@@ -1,0 +1,158 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHINE-Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C:\wamp64\www\img\logoicone.ico.png" type="images/png">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img class="logo" src="img/Design sans titre (3).png" alt="Logo">
+        </div>
+
+
+
+
+
+
+
+
+        <h5 class="brand">SHINE</h5>
+        <div class="onglets">
+            <a href="airshine.php">Air Shine's</a>
+            <a href="Airshinexarl.php">Air Shine's X ARL</a>
+          
+            <a href="commandes.php">Mes commandes</a>
+
+            
+            <a href="index.html">Déconnexion</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>SHINE,</h1>
+        <h4>LA PAIRE DE VOS RÊVES SE TROUVE ICI !</h4>
+
+     
+
+          
+       
+
+
+
+
+        
+    </header>
+
+    
+    <section class="main" id="produits">
+
+
+
+
+        <div class="content">
+            <div class="card">
+                <div class="left">
+                    <h1>Nos paires...</h1>
+                    <p>Découvrez les AirShine's X Nike : des chaussures alliant style et confort. Avec une base Air Aordan 1 mid et leurs finitions impeccables, elles vous offrent une allure raffinée. Fabriquées à partir de matériaux de haute qualité, elles assurent une durabilité exceptionnelle. Les AirShine's sont dotées d'une semelle intérieure rembourrée offrant un confort optimal tout au long de la journée. Polyvalentes et élégantes, elles sont parfaites pour toutes les occasions.</p>
+                </div>
+                <div class="right">
+                    <img src="https://www.sneakers-actus.fr/wp-content/uploads/2014/10/Air-Jordan-1-Mid-White-Cool-Grey-3.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="left">
+                    <h1>Nos collaborations...</h1>
+
+
+
+                    <p> Une LAR , nous avons decidé de collaborer avec ces 3 marques de luxes.s </p>
+                </div>
+                <div class="right">
+                    <img src="img\collab.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+        <h1>Nos services</h1>
+        <div class="services">
+            
+            <div class="service">
+                <h3>Livraison gratuite</h3>
+                <p>Nos magasins sont présents dans la France entière, vous pouvez commander ou bien trouver la paire de vos rêves sur place dans nos magasins !</p>
+            </div>
+
+            <div class="service">
+                <h3>Paiement en ligne</h3>
+                <p>Visa, PaySafeCard, AmazonPay, Paypal, Klarna,... Nous acceptons tous types de paiements en ligne de façon sécurisée !</p>
+            </div>
+
+            <div class="service">
+                <h3>Aimé ou remboursé</h3>
+                <p>Bien qu'il n'y ait aucune chance que vous n'appréciez pas nos produits, nous acceptons tout de même de vous rembourser si vous n'êtes pas satisfait !</p>
+            </div>
+
+        </div>
+
+        <p id="contact">Contact : 06 70 22 72 72 | &copy; 2023, Belaid, Rhazlaoui.</p>
+        <img class= "image2" src="img\new page.png">
+
+        <img class="su" src="img\mclaren.png">
+    </footer>
+</body>
+</html>
+
+<style type="text/css">
+.su{
+    position: relative;
+    bottom: 1140px;
+    left: 1180px;
+}
+
+.image2{
+    position: relative;
+    bottom: 1100px;
+    right: 80px;
+}
+</style>
+
+<?php
+  // Initialiser la session
+  session_start();
+  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+  if(!isset($_SESSION["username"])){
+    header("Location: login.php");
+    exit(); 
+  }
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sucess">
+    <h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
+    <p>C'est votre espace utilisateur.</p>
+    <a href="logout.php">Déconnexion</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<div class="box">
+      <div class="loader1"></div>
+      
+      <img class="img" src="img\Design sans titre (3).png">
+      </div>
+      <p>SHINE<p>
+    </div>
+    <p>SHINE</p>
+
+<style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+.img{
+  width: 95px;
+  height: auto;
+  position: relative;
+  left: 692px;
+  top: 214px;
+
+}
+
+
+.container{
+  text-align: center;
+  background-color: #FF80F2;
+  overflow: hidden;
+  color: #FF80F2;
+}
+
+.box:nth-child(2n-1){
+  background-color: #FF80F2;
+}
+
+.box{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  float:left;
+  position: relative;
+  /*margin:0 -4px -5px -2px;*/
+  transition: all .2s ease;
+  background-color: #FF80F2;
+
+}
+
+
+
+  p{
+  color: #777;
+  font-family:  Lato,"Helvetica Neue" ;
+  font-weight: 300;
+  position: absolute;
+  font-size: 20px;
+  width: 450px;
+  height: 300px;
+  text-align: center;
+  bottom: 0px;
+  margin: 0;
+  top:160px;
+  background-color: #FF80F2;
+  opacity: 0;
+  text-transform: uppercase;
+ 
+}
+
+.box:hover p{
+  bottom:0px;
+  top:175px;
+  opacity: 1;
+  transition: all .2s ease;
+  z-index: 2;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 700px){
+  .box{
+    width: 50%;
+  }
+
+  .box:nth-child(2n-1){
+    background-color: #FF80F2;
+  }
+
+  .box:nth-child(4n),.box:nth-child(4n-3) {
+    background-color: #FF80F2;
+  }
+
+}
+
+@media (max-width: 420px){
+  .box{
+    width: 100%;
+  }
+
+  .box:nth-child(4n),.box:nth-child(4n-3){
+    background-color: #FF80F2;
+  }
+
+  .box:nth-child(2n-1){
+    background-color:#FF80F2;
+  }
+
+}
+
+.loader1{
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  border: 3px solid  #000000;
+
+
+  top: 28%;
+  top: -webkit-calc(50% - 43px);
+  top: calc(50% - 43px);
+  left: 35%;
+  left: -webkit-calc(50% - 43px);
+  left: calc(50% - 43px);
+
+  -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+  -webkit-animation: loader1 3s linear infinite;
+      animation: loader1 3s linear infinite;
+  color: #000000;
+}
+
+.loader1:after{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  width: 11px;
+  height: 11px;
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+@-webkit-keyframes loader1{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes loader1{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
